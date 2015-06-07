@@ -14,6 +14,8 @@ Vagrant.configure('2') do |config|
   config.berkshelf.enabled = true
 
   config.vm.provision 'chef_zero' do |chef|
-    chef.add_recipe 'emacs'
+    chef.roles_path = ['roles']
+
+    chef.add_role 'base'
   end
 end
