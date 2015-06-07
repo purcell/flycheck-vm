@@ -21,6 +21,7 @@
 name 'base'
 description 'Setup the base system'
 run_list 'recipe[locale]',
+         'recipe[apt]',
          'recipe[emacs]'
 default_attributes 'emacs' => {
                      'cask' => {
