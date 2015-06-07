@@ -16,6 +16,10 @@ Vagrant.configure('2') do |config|
   config.vm.provision 'chef_zero' do |chef|
     chef.roles_path = ['roles']
 
-    chef.add_role 'flycheck'
+    roles = ENV['CHEF_ROLES']
+    roles = roles ? roles.split(',') : ['flycheck']
+    roles.each do |role|
+      chef.add_role role
+    end
   end
 end
