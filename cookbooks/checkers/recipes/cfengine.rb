@@ -20,8 +20,9 @@
 
 apt_repository 'cfengine' do
   uri 'http://cfengine.com/pub/apt/packages'
-  components ['main', 'stable']
-  key 'https://s3.amazonaws.com/cfengine.package-repos/pub/gpg.key'
+  distribution 'stable'
+  components ['main']
+  key 'http://cfengine.com/pub/gpg.key'
 end
 
 package 'cfengine-community' do
