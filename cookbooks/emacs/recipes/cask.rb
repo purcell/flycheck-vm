@@ -18,6 +18,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-include_recipe 'emacs::emacs24'
-include_recipe 'emacs::snapshot'
-include_recipe 'emacs::cask'
+git '/opt/cask' do
+  repository 'https://github.com/cask/cask.git'
+  revision node['emacs']['cask']['revision']
+  action :sync
+end
+
+file '/etc/profile.d/cask.sh' do
+  owner 'root'
+  group 'root'
+  mode '0644'
+  action :create
+  content <<END
+export PATH="/opt/cask/bin:$PATH"
+END
+end
