@@ -4,15 +4,9 @@
     "description": "Basic system setup and packages",
     "run_list": [
         "recipe[locale]",
-        "recipe[apt]",
-        "recipe[emacs]"
+        "recipe[apt]"
     ],
     "default_attributes": {
-        "emacs": {
-            "cask": {
-                "revision": "v0.7.2"
-            }
-        },
         "locale": {
             "lang": "en_US.utf8",
             "lc_all": "en_US.utf8"

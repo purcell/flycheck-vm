@@ -1,0 +1,16 @@
+{
+    "json_class": "Chef::Role",
+    "name": "emacs",
+    "description": "Install Emacs and Cask",
+    "run_list": [
+        "role[base]",
+        "recipe[emacs]"
+    ],
+    "default_attributes": {
+        "emacs": {
+            "cask": {
+                "revision": "v0.7.2"
+            }
+        }
+    }
+}
