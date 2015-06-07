@@ -20,9 +20,14 @@
 
 name 'base'
 description 'Setup the base system'
-run_list 'recipe[emacs]'
+run_list 'recipe[locale]',
+         'recipe[emacs]'
 default_attributes 'emacs' => {
                      'cask' => {
                        'revision' => 'v0.7.2'
                      }
+                   },
+                   :locale => {
+                     :lang => 'en_US.utf8',
+                     :lc_all => 'en_US.utf8'
                    }
