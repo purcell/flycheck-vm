@@ -1,0 +1,8 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-cfengine",
+    "run_list": [
+        "role[base]",
+        "recipe[checkers::cfengine]"
+    ]
+}

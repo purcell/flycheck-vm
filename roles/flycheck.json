@@ -4,6 +4,7 @@
     "description": "Installs a Flycheck testing system",
     "run_list": [
         "role[language-ada]",
-        "role[language-asciidoc]"
+        "role[language-asciidoc]",
+        "role[language-cfengine]"
     ]
 }
