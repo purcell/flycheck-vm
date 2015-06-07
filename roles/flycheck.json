@@ -1,6 +1,6 @@
 {
     "json_class": "Chef::Role",
-    "name": "Flycheck",
+    "name": "flycheck",
     "description": "Installs a Flycheck testing system",
     "run_list": [
         "role[language-ada]",
