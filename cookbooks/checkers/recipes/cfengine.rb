@@ -26,4 +26,5 @@ end
 
 package 'cfengine-community' do
   action :upgrade
+  options '--no-install-recommends'
 end

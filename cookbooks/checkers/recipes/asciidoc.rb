@@ -20,4 +20,5 @@
 
 package 'asciidoc' do
   action :upgrade
+  options '--no-install-recommends'
 end

@@ -20,4 +20,5 @@
 
 package 'gnat' do
   action :upgrade
+  options '--no-install-recommends'
 end
