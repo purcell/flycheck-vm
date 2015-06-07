@@ -6,3 +6,4 @@ description      'Installs Emacs 24, Emacs Snapshot and Cask'
 version          '0.1.0'
 
 depends 'apt'
+depends 'git'
