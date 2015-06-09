@@ -1,0 +1,18 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-nodejs",
+    "run_list": [
+        "role[base]",
+        "recipe[nodejs]",
+        "recipe[nodejs::npm]"
+    ],
+    "override_attributes": {
+        "nodejs": {
+            "engine": "node",
+            "install_method": "package",
+            "npm": {
+                "install_method": "package"
+            }
+        }
+    }
+}

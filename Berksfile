@@ -7,6 +7,7 @@ cookbook 'build-essential'
 
 # Languages and runtimes
 cookbook 'ruby'
+cookbook 'nodejs'
 
 # Our Cookbooks
 cookbook 'emacs', path: 'cookbooks/emacs'

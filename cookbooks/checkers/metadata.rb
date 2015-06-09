@@ -5,5 +5,9 @@ license          'X11/MIT'
 description      'Installs all syntax checkers supported by Flycheck'
 version          '0.1.0'
 
+# Basic cookbooks
 depends 'apt'
+
+# Language environments
 depends 'ruby'
+depends 'nodejs'
