@@ -6,7 +6,7 @@
         "role[base]",
         "recipe[emacs]"
     ],
-    "default_attributes": {
+    "override_attributes": {
         "emacs": {
             "cask": {
                 "revision": "v0.7.2"
