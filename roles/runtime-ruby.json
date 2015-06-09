@@ -1,0 +1,16 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-ruby",
+    "run_list": [
+        "role[base]",
+        "recipe[ruby::1.9.1]",
+        "recipe[ruby::symlinks]"
+    ],
+    "override_attributes": {
+        "languages": {
+            "ruby": {
+                "default_version": "1.9.1"
+            }
+        }
+    }
+}

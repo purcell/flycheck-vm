@@ -6,3 +6,4 @@ description      'Installs all syntax checkers supported by Flycheck'
 version          '0.1.0'
 
 depends 'apt'
+depends 'ruby'
