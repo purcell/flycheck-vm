@@ -8,6 +8,7 @@
         "role[language-asciidoc]",
         "role[language-cfengine]",
         "role[language-chef]",
-        "role[language-coffee]"
+        "role[language-coffee]",
+        "role[language-coq]"
     ]
 }
