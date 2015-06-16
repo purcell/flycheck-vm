@@ -12,6 +12,7 @@ DEPENDENCIES
   erlang
   gcc
     path: cookbooks/gcc
+  golang
   lint
     path: cookbooks/lint
   llvm
@@ -50,6 +51,7 @@ GRAPH
     dmg (>= 0.0.0)
     windows (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  golang (1.5.1)
   homebrew (1.12.0)
     build-essential (>= 2.1.2)
   lint (0.0.0)

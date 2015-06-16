@@ -9,6 +9,7 @@ cookbook 'build-essential'
 cookbook 'ruby'
 cookbook 'nodejs'
 cookbook 'erlang'
+cookbook 'golang'
 
 cookbook 'lint', path: 'cookbooks/lint'
 cookbook 'cfengine', path: 'cookbooks/cfengine'

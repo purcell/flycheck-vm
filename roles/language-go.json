@@ -1,0 +1,19 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-go",
+    "run_list": [
+        "role[base]",
+        "recipe[golang]",
+        "recipe[golang::packages]"
+    ],
+    "override_attributes": {
+        "go": {
+            "gopath": "/usr/local/lib/go",
+            "packages": [
+                "golang.org/x/tools/cmd/vet",
+                "github.com/golang/lint/golint",
+                "github.com/kisielk/errcheck"
+            ]
+        }
+    }
+}

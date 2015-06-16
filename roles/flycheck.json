@@ -14,6 +14,7 @@
         "role[language-cxx]",
         "role[language-d]",
         "role[language-erlang]",
-        "role[language-fortran]"
+        "role[language-fortran]",
+        "role[language-go]"
     ]
 }
