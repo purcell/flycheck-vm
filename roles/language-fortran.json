@@ -1,10 +1,9 @@
 {
     "json_class": "Chef::Role",
-    "name": "language-cxx",
+    "name": "language-fortran",
     "run_list": [
         "role[base]",
         "role[runtime-gcc]",
-        "role[runtime-llvm]",
-        "recipe[lint::cppcheck]"
+        "recipe[gcc::gfortran]"
     ]
 }

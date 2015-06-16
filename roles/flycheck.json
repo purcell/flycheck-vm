@@ -13,6 +13,7 @@
         "role[language-css]",
         "role[language-cxx]",
         "role[language-d]",
-        "role[language-erlang]"
+        "role[language-erlang]",
+        "role[language-fortran]"
     ]
 }

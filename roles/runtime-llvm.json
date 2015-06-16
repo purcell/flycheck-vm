@@ -1,0 +1,13 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-lvvm",
+    "run_list": [
+        "role[base]",
+        "recipe[llvm]"
+    ],
+    "override_attributes": {
+        "llvm": {
+            "version": "3.5"
+        }
+    }
+}
