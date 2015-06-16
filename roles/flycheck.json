@@ -11,6 +11,7 @@
         "role[language-coffee]",
         "role[language-coq]",
         "role[language-css]",
-        "role[language-cxx]"
+        "role[language-cxx]",
+        "role[language-d]"
     ]
 }
