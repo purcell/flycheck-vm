@@ -1,3 +1,0 @@
-name 'chef'
-
-depends 'ruby'

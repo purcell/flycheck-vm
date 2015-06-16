@@ -1,3 +1,0 @@
-name 'coffee'
-
-depends 'nodejs'

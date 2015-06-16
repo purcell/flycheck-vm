@@ -18,8 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-include_recipe 'nodejs'
-
-nodejs_npm 'coffee-script' do
-  action :install
+['coffee-script', 'coffeelint'].each do |pkg|
+  nodejs_npm pkg do
+    action :install
+  end
 end
