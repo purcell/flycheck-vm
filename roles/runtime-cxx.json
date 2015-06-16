@@ -1,0 +1,19 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-cxx",
+    "run_list": [
+        "role[base]",
+        "recipe[llvm]",
+        "recipe[gcc]"
+    ],
+    "override_attributes": {
+        "languages": {
+            "llvm": {
+                "version": "3.5"
+            },
+            "gcc": {
+                "version": "4.8"
+            }
+        }
+    }
+}

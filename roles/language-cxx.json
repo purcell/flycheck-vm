@@ -1,8 +1,8 @@
 {
     "json_class": "Chef::Role",
-    "name": "language-ada",
+    "name": "language-c-cxx",
     "run_list": [
         "role[base]",
-        "recipe[gcc::gnat]"
+        "role[runtime-cxx]"
     ]
 }

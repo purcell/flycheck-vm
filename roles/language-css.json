@@ -1,0 +1,9 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-css",
+    "run_list": [
+        "role[base]",
+        "role[runtime-nodejs]",
+        "recipe[css::lint]"
+    ]
+}

@@ -9,6 +9,8 @@
         "role[language-cfengine]",
         "role[language-chef]",
         "role[language-coffee]",
-        "role[language-coq]"
+        "role[language-coq]",
+        "role[language-css]",
+        "role[language-cxx]"
     ]
 }
