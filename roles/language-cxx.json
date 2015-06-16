@@ -3,6 +3,7 @@
     "name": "language-c-cxx",
     "run_list": [
         "role[base]",
-        "role[runtime-cxx]"
+        "role[runtime-cxx]",
+        "recipe[lint::cppcheck]"
     ]
 }
