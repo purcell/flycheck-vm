@@ -19,7 +19,7 @@
 # SOFTWARE.
 
 ['gcc', 'g++'].each do |pkg|
-  package "#{pkg}-#{node['languages']['gcc']['version']}" do
+  package "#{pkg}-#{node['gcc']['version']}" do
     action :upgrade
     options '--no-install-recommends'
   end

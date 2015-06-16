@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-version = node['languages']['d']['dmd']['version']
+version = node['d']['dmd']['version']
 major = version.split('.').first
 arch = 'amd64'
 pkgname = "dmd_#{version}-0_#{arch}.deb"

@@ -6,11 +6,9 @@
         "recipe[d::dmd]"
     ],
     "override_attributes": {
-        "languages": {
-            "d": {
-                "dmd": {
-                    "version": "2.066.0"
-                }
+        "d": {
+            "dmd": {
+                "version": "2.066.0"
             }
         }
     }

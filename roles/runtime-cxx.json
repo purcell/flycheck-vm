@@ -7,13 +7,11 @@
         "recipe[gcc]"
     ],
     "override_attributes": {
-        "languages": {
-            "llvm": {
-                "version": "3.5"
-            },
-            "gcc": {
-                "version": "4.8"
-            }
+        "llvm": {
+            "version": "3.5"
+        },
+        "gcc": {
+            "version": "4.8"
         }
     }
 }
