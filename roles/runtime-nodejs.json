@@ -11,7 +11,7 @@
             "engine": "node",
             "install_method": "package",
             "npm": {
-                "install_method": "package"
+                "install_method": "embedded"
             }
         }
     }
