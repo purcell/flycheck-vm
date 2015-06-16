@@ -1,11 +1,24 @@
 DEPENDENCIES
   apt
   build-essential
-  checkers
-    path: cookbooks/checkers
+  cfengine
+    path: cookbooks/cfengine
+  coq
+    path: cookbooks/coq
+  d
+    path: cookbooks/d
   emacs
     path: cookbooks/emacs
+  erlang
+  gcc
+    path: cookbooks/gcc
+  lint
+    path: cookbooks/lint
+  llvm
+    path: cookbooks/llvm
   locale
+  markup
+    path: cookbooks/markup
   nodejs
   ruby
 
@@ -17,15 +30,21 @@ GRAPH
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.2.3)
-  checkers (0.1.0)
-    apt (>= 0.0.0)
-    nodejs (>= 0.0.0)
-    ruby (>= 0.0.0)
+  cfengine (0.0.0)
   chef_handler (1.1.9)
+  coq (0.0.0)
+  d (0.0.0)
   dmg (2.2.2)
-  emacs (0.1.0)
+  emacs (0.0.0)
     apt (>= 0.0.0)
     git (>= 0.0.0)
+  erlang (1.5.8)
+    apt (>= 1.7.0)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+    yum-erlang_solutions (>= 0.0.0)
+  gcc (0.0.0)
   git (4.2.2)
     build-essential (>= 0.0.0)
     dmg (>= 0.0.0)
@@ -33,7 +52,12 @@ GRAPH
     yum-epel (>= 0.0.0)
   homebrew (1.12.0)
     build-essential (>= 2.1.2)
+  lint (0.0.0)
+    nodejs (>= 0.0.0)
+    ruby (>= 0.0.0)
+  llvm (0.0.0)
   locale (1.0.2)
+  markup (0.0.0)
   nodejs (2.4.0)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
@@ -45,4 +69,6 @@ GRAPH
     chef_handler (>= 0.0.0)
   yum (3.6.1)
   yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-erlang_solutions (0.2.0)
     yum (~> 3.0)
