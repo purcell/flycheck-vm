@@ -8,6 +8,8 @@ cookbook 'build-essential'
 # Languages and runtimes
 cookbook 'ruby'
 cookbook 'nodejs'
+cookbook 'erlang'
+
 cookbook 'lint', path: 'cookbooks/lint'
 cookbook 'cfengine', path: 'cookbooks/cfengine'
 cookbook 'coq', path: 'cookbooks/coq'

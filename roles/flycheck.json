@@ -12,6 +12,7 @@
         "role[language-coq]",
         "role[language-css]",
         "role[language-cxx]",
-        "role[language-d]"
+        "role[language-d]",
+        "role[language-erlang]"
     ]
 }

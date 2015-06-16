@@ -1,0 +1,14 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-erlang",
+    "run_list": [
+        "role[base]",
+        "recipe[erlang]"
+    ],
+    "override_attributes": {
+        "erlang": {
+            "guitools": false,
+            "install_method": "esl"
+        }
+    }
+}
