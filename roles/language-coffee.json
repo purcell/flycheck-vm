@@ -4,6 +4,7 @@
     "run_list": [
         "role[base]",
         "role[runtime-nodejs]",
-        "recipe[checkers::coffee]"
+        "recipe[coffee]",
+        "recipe[coffee::lint]"
     ]
 }

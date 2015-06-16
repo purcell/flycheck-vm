@@ -1,0 +1,3 @@
+name 'coffee'
+
+depends 'nodejs'

@@ -1,0 +1,3 @@
+name 'chef'
+
+depends 'ruby'

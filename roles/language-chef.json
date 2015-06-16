@@ -4,6 +4,6 @@
     "run_list": [
         "role[base]",
         "role[runtime-ruby]",
-        "recipe[checkers::chef]"
+        "recipe[chef::foodcritic]"
     ]
 }

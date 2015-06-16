@@ -18,12 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# foodcritic depends on nokogiri, which needs zlib1g-dev to build
-package 'zlib1g-dev' do
-  action :upgrade
-  options '--no-install-recommends'
-end
+include_recipe 'nodejs'
 
-gem_package 'foodcritic' do
-  action :upgrade
+nodejs_npm 'coffee-script' do
+  action :install
 end

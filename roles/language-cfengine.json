@@ -3,6 +3,6 @@
     "name": "language-cfengine",
     "run_list": [
         "role[base]",
-        "recipe[checkers::cfengine]"
+        "recipe[cfengine]"
     ]
 }

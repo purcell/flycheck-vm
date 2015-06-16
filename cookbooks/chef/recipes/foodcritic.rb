@@ -18,10 +18,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-nodejs_npm 'coffee-script' do
-  action :install
+include_recipe 'ruby::symlinks'
+
+# foodcritic depends on nokogiri, which needs zlib1g-dev to build
+package 'zlib1g-dev' do
+  action :upgrade
+  options '--no-install-recommends'
 end
 
-nodejs_npm 'coffeelint' do
-  action :install
+gem_package 'foodcritic' do
+  action :upgrade
 end

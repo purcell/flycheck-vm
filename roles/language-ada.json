@@ -3,6 +3,6 @@
     "name": "language-ada",
     "run_list": [
         "role[base]",
-        "recipe[checkers::ada]"
+        "recipe[ada]"
     ]
 }
