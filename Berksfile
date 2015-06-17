@@ -16,8 +16,9 @@ cookbook 'cfengine', path: 'cookbooks/cfengine'
 cookbook 'coq', path: 'cookbooks/coq'
 cookbook 'gcc', path: 'cookbooks/gcc'
 cookbook 'llvm', path: 'cookbooks/llvm'
-cookbook 'markup', path: 'cookbooks/markup'
 cookbook 'd', path: 'cookbooks/d'
+cookbook 'web', path: 'cookbooks/web'
+cookbook 'markup', path: 'cookbooks/markup'
 
 # Emacs
 cookbook 'emacs', path: 'cookbooks/emacs'

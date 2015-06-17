@@ -1,9 +1,9 @@
 {
     "json_class": "Chef::Role",
-    "name": "language-css",
+    "name": "language-handlebars",
     "run_list": [
         "role[base]",
         "role[runtime-nodejs]",
-        "recipe[web::css]"
+        "recipe[web::handlebars]"
     ]
 }

@@ -1,0 +1,8 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-html",
+    "run_list": [
+        "role[base]",
+        "recipe[web::html]"
+    ]
+}

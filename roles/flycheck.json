@@ -14,7 +14,11 @@
         "role[language-cxx]",
         "role[language-d]",
         "role[language-erlang]",
+        "role[language-eruby]",
         "role[language-fortran]",
-        "role[language-go]"
+        "role[language-go]",
+        "role[language-haml]",
+        "role[language-handlebars]",
+        "role[language-html]"
     ]
 }
