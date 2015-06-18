@@ -1,0 +1,10 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-yaml",
+    "run_list": [
+        "role[base]",
+        "role[runtime-nodejs]",
+        "role[runtime-ruby]",
+        "recipe[linters::yaml]"
+    ]
+}

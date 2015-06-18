@@ -22,6 +22,17 @@
         "role[language-html]",
         "role[language-javascript]",
         "role[language-json]",
-        "role[language-less]"
+        "role[language-less]",
+        "role[language-puppet]",
+        "role[language-python]",
+        "role[language-rst]",
+        "role[language-sass]",
+        "role[language-scss]",
+        "role[language-slim]",
+        "role[language-tex]",
+        "role[language-texinfo]",
+        "role[language-verilog]",
+        "role[language-xml]",
+        "role[language-yaml]"
     ]
 }

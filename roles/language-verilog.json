@@ -1,0 +1,8 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-verilog",
+    "run_list": [
+        "role[base]",
+        "recipe[linters::verilog]"
+    ]
+}

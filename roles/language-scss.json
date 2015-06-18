@@ -1,0 +1,7 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-scss",
+    "run_list": [
+        "role[language-sass]"
+    ]
+}
