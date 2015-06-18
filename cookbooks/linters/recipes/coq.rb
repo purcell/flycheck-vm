@@ -20,4 +20,5 @@
 
 package 'coq' do
   action :upgrade
+  options '--no-install-recommends'
 end
