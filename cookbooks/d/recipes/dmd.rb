@@ -22,7 +22,7 @@ version = node['d']['dmd']['version']
 major = version.split('.').first
 arch = 'amd64'
 pkgname = "dmd_#{version}-0_#{arch}.deb"
-localpath = "/tmp/#{pkgname}"
+localpath = "#{Chef::Config[:file_cache_path]}/#{pkgname}"
 
 remote_file localpath do
   source "http://downloads.dlang.org/releases/#{major}.x/#{version}/#{pkgname}"
