@@ -20,6 +20,8 @@
         "role[language-haml]",
         "role[language-handlebars]",
         "role[language-html]",
-        "role[language-javascript]"
+        "role[language-javascript]",
+        "role[language-json]",
+        "role[language-less]"
     ]
 }

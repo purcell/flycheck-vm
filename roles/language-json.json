@@ -1,0 +1,9 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-json",
+    "run_list": [
+        "role[base]",
+        "role[runtime-nodejs]",
+        "recipe[linters::json]"
+    ]
+}
