@@ -4,6 +4,6 @@
     "run_list": [
         "role[base]",
         "role[runtime-nodejs]",
-        "recipe[lint::coffeelint]"
+        "recipe[linters::coffee]"
     ]
 }

@@ -3,6 +3,6 @@
     "name": "language-coq",
     "run_list": [
         "role[base]",
-        "recipe[coq]"
+        "recipe[linters::coq]"
     ]
 }

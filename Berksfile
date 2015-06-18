@@ -11,14 +11,10 @@ cookbook 'nodejs'
 cookbook 'erlang'
 cookbook 'golang'
 
-cookbook 'lint', path: 'cookbooks/lint'
-cookbook 'cfengine', path: 'cookbooks/cfengine'
-cookbook 'coq', path: 'cookbooks/coq'
 cookbook 'gcc', path: 'cookbooks/gcc'
 cookbook 'llvm', path: 'cookbooks/llvm'
 cookbook 'd', path: 'cookbooks/d'
-cookbook 'web', path: 'cookbooks/web'
-cookbook 'markup', path: 'cookbooks/markup'
+cookbook 'linters', path: 'cookbooks/linters'
 
 # Emacs
 cookbook 'emacs', path: 'cookbooks/emacs'

@@ -5,6 +5,6 @@
         "role[base]",
         "role[runtime-gcc]",
         "role[runtime-llvm]",
-        "recipe[lint::cppcheck]"
+        "recipe[linters::cxx]"
     ]
 }

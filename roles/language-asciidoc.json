@@ -3,6 +3,6 @@
     "name": "language-asciidoc",
     "run_list": [
         "role[base]",
-        "recipe[markup::asciidoc]"
+        "recipe[linters::asciidoc]"
     ]
 }

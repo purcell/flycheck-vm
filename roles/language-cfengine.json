@@ -3,6 +3,6 @@
     "name": "language-cfengine",
     "run_list": [
         "role[base]",
-        "recipe[cfengine]"
+        "recipe[linters::cfengine]"
     ]
 }

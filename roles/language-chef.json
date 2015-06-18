@@ -4,6 +4,6 @@
     "run_list": [
         "role[base]",
         "role[runtime-ruby]",
-        "recipe[lint::foodcritic]"
+        "recipe[linters::chef]"
     ]
 }

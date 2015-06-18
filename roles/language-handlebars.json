@@ -4,6 +4,6 @@
     "run_list": [
         "role[base]",
         "role[runtime-nodejs]",
-        "recipe[web::handlebars]"
+        "recipe[linters::handlebars]"
     ]
 }
