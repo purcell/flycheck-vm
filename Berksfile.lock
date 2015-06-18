@@ -15,6 +15,7 @@ DEPENDENCIES
     path: cookbooks/llvm
   locale
   nodejs
+  python
   ruby
 
 GRAPH
@@ -48,6 +49,7 @@ GRAPH
     build-essential (>= 2.1.2)
   linters (0.0.0)
     nodejs (>= 0.0.0)
+    python (>= 0.0.0)
     ruby (>= 0.0.0)
   llvm (0.0.0)
   locale (1.0.2)
@@ -56,6 +58,9 @@ GRAPH
     ark (>= 0.0.0)
     build-essential (>= 0.0.0)
     homebrew (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
   ruby (0.9.3)
   windows (1.37.0)

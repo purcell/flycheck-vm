@@ -1,0 +1,13 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-python",
+    "run_list": [
+        "role[base]",
+        "recipe[python]"
+    ],
+    "override_attributes": {
+        "python": {
+            "install_method": "package"
+        }
+    }
+}

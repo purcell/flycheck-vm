@@ -1,0 +1,10 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-javascript",
+    "run_list": [
+        "role[base]",
+        "role[runtime-nodejs]",
+        "role[runtime-python]",
+        "recipe[linters::javascript]"
+    ]
+}

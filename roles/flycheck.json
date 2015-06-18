@@ -19,6 +19,7 @@
         "role[language-go]",
         "role[language-haml]",
         "role[language-handlebars]",
-        "role[language-html]"
+        "role[language-html]",
+        "role[language-javascript]"
     ]
 }

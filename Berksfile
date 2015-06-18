@@ -6,10 +6,11 @@ cookbook 'locale'
 cookbook 'build-essential'
 
 # Languages and runtimes
-cookbook 'ruby'
-cookbook 'nodejs'
 cookbook 'erlang'
 cookbook 'golang'
+cookbook 'nodejs'
+cookbook 'python'
+cookbook 'ruby'
 
 cookbook 'gcc', path: 'cookbooks/gcc'
 cookbook 'llvm', path: 'cookbooks/llvm'
