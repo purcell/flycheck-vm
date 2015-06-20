@@ -11,6 +11,7 @@ cookbook 'golang'
 cookbook 'nodejs'
 cookbook 'python'
 cookbook 'ruby'
+cookbook 'rustlang'
 
 cookbook 'gcc', path: 'cookbooks/gcc'
 cookbook 'llvm', path: 'cookbooks/llvm'

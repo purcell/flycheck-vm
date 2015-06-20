@@ -1,0 +1,14 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-rust",
+    "run_list": [
+        "role[base]",
+        "recipe[rustlang]"
+    ],
+    "override_attributes": {
+        "rustlang": {
+            "version": "1.0.0",
+            "installation_prefix": "/opt"
+        }
+    }
+}

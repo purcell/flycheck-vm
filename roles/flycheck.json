@@ -26,6 +26,7 @@
         "role[language-puppet]",
         "role[language-python]",
         "role[language-rst]",
+        "role[language-rust]",
         "role[language-sass]",
         "role[language-scss]",
         "role[language-slim]",
