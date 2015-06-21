@@ -1,0 +1,3 @@
+name 'haskell'
+
+depends 'apt'

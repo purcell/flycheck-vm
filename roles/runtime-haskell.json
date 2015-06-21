@@ -1,0 +1,24 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-haskell",
+    "run_list": [
+        "role[base]",
+        "recipe[haskell]"
+    ],
+    "override_attributes": {
+        "haskell": {
+            "ghc": {
+                "version": "7.10.2"
+            },
+            "cabal": {
+                "version": "1.22"
+            },
+            "alex": {
+                "version": "3.1.4"
+            },
+            "happy": {
+                "version": "1.19.5"
+            }
+        }
+    }
+}
