@@ -3,7 +3,8 @@
     "name": "runtime-haskell",
     "run_list": [
         "role[base]",
-        "recipe[haskell]"
+        "recipe[haskell]",
+        "recipe[haskell::cabal]"
     ],
     "override_attributes": {
         "haskell": {

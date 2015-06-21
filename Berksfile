@@ -6,6 +6,7 @@ cookbook 'locale'
 cookbook 'build-essential'
 
 # Languages and runtimes
+cookbook 'cabal'
 cookbook 'erlang'
 cookbook 'golang'
 cookbook 'nodejs'

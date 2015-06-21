@@ -3,6 +3,7 @@
     "name": "language-haskell",
     "run_list": [
         "role[base]",
-        "role[runtime-haskell]"
+        "role[runtime-haskell]",
+        "recipe[linters::haskell]"
     ]
 }

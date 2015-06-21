@@ -1,6 +1,7 @@
 DEPENDENCIES
   apt
   build-essential
+  cabal
   d
     path: cookbooks/d
   emacs
@@ -29,6 +30,7 @@ GRAPH
     7-zip (>= 0.0.0)
     windows (>= 0.0.0)
   build-essential (2.2.3)
+  cabal (0.1.2)
   chef_handler (1.1.9)
   d (0.0.0)
   dmg (2.2.2)
@@ -50,9 +52,11 @@ GRAPH
   golang (1.5.1)
   haskell (0.0.0)
     apt (>= 0.0.0)
+    cabal (>= 0.0.0)
   homebrew (1.12.0)
     build-essential (>= 2.1.2)
   linters (0.0.0)
+    haskell (>= 0.0.0)
     nodejs (>= 0.0.0)
     python (>= 0.0.0)
     ruby (>= 0.0.0)
