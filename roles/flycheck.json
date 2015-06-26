@@ -25,6 +25,7 @@
         "role[language-json]",
         "role[language-less]",
         "role[language-perl]",
+        "role[language-php]",
         "role[language-puppet]",
         "role[language-python]",
         "role[language-rst]",

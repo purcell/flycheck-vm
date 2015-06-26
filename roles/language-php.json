@@ -1,0 +1,9 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-php",
+    "run_list": [
+        "role[base]",
+        "role[runtime-php]",
+        "recipe[linters::php]"
+    ]
+}
