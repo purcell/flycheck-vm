@@ -18,6 +18,7 @@ DEPENDENCIES
     path: cookbooks/llvm
   locale
   nodejs
+  perl
   python
   ruby
   rustlang
@@ -58,6 +59,7 @@ GRAPH
   linters (0.0.0)
     haskell (>= 0.0.0)
     nodejs (>= 0.0.0)
+    perl (>= 0.0.0)
     python (>= 0.0.0)
     ruby (>= 0.0.0)
   llvm (0.0.0)
@@ -68,6 +70,7 @@ GRAPH
     build-essential (>= 0.0.0)
     homebrew (>= 0.0.0)
     yum-epel (>= 0.0.0)
+  perl (1.2.4)
   python (1.4.6)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)

@@ -1,0 +1,13 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-perl",
+    "run_list": [
+        "role[base]",
+        "recipe[perl]"
+    ],
+    "override_attributes": {
+        "perl": {
+            "packages": ["perl"]
+        }
+    }
+}

@@ -24,6 +24,7 @@
         "role[language-javascript]",
         "role[language-json]",
         "role[language-less]",
+        "role[language-perl]",
         "role[language-puppet]",
         "role[language-python]",
         "role[language-rst]",
