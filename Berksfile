@@ -21,6 +21,7 @@ cookbook 'gcc',     path: 'cookbooks/gcc'
 cookbook 'haskell', path: 'cookbooks/haskell'
 cookbook 'linters', path: 'cookbooks/linters'
 cookbook 'llvm',    path: 'cookbooks/llvm'
+cookbook 'lua',     path: 'cookbooks/lua'
 
 # Emacs
 cookbook 'emacs', path: 'cookbooks/emacs'
