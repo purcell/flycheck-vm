@@ -1,0 +1,9 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-lua",
+    "run_list": [
+        "role[base]",
+        "role[runtime-lua]",
+        "recipe[linters::lua]"
+    ]
+}

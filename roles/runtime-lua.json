@@ -1,0 +1,13 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-lua",
+    "run_list": [
+        "role[base]",
+        "recipe[lua]"
+    ],
+    "override_attributes": {
+        "lua": {
+            "version": "5.2"
+        }
+    }
+}

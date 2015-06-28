@@ -21,6 +21,5 @@
 include_recipe 'lua'
 
 lua_rocks 'luacheck' do
-  action :install
-
+  action :upgrade
 end
