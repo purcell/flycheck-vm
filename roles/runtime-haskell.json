@@ -3,11 +3,11 @@
     "name": "runtime-haskell",
     "run_list": [
         "role[base]",
-        "recipe[haskell]",
-        "recipe[haskell::cabal]"
+        "recipe[haskell]"
     ],
     "override_attributes": {
         "haskell": {
+            "update_cabal": false,
             "ghc": {
                 "version": "7.10.2"
             },

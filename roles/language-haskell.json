@@ -5,5 +5,12 @@
         "role[base]",
         "role[runtime-haskell]",
         "recipe[linters::haskell]"
-    ]
+    ],
+    "override_attributes": {
+        "haskell": {
+            "hlint": {
+                "install_method": "package"
+            }
+        }
+    }
 }

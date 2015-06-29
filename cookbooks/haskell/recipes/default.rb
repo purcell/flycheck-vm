@@ -42,3 +42,5 @@ export PATH="/opt/#{program}/#{version}/bin:$PATH"
 END
   end
 end
+
+include_recipe 'haskell::update' if node['haskell']['update_cabal']
