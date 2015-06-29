@@ -1,0 +1,15 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-rpm",
+    "run_list": [
+        "role[base]",
+        "recipe[linters::rpm]"
+    ],
+    "override_attributes": {
+        "linters": {
+            "rpm": {
+                "rpmlint_version": "1.6"
+            }
+        }
+    }
+}

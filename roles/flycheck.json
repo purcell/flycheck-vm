@@ -30,6 +30,7 @@
         "role[language-puppet]",
         "role[language-python]",
         "role[language-racket]",
+        "role[language-rpm]",
         "role[language-rst]",
         "role[language-rust]",
         "role[language-sass]",
