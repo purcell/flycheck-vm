@@ -71,7 +71,8 @@ end
 
 def load_current_resource
   @bin = node['lua']['luarocks']
-  @current_resource = Chef::Resource::LuaRocks.new(@new_resource.name)
+  resource = Chef::Resource.resource_for_node(:lua_rocks, node)
+  @current_resource = resource.new(@new_resource.name)
   @current_resource.package_name(@new_resource.package_name)
   @current_resource.version(
     get_installed_version(@new_resource.package_name))
