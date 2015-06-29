@@ -34,6 +34,7 @@
         "role[language-rust]",
         "role[language-sass]",
         "role[language-scss]",
+        "role[language-sh]",
         "role[language-slim]",
         "role[language-tex]",
         "role[language-texinfo]",

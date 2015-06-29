@@ -1,0 +1,13 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-sh",
+    "run_list": [
+        "role[base]",
+        "recipe[linters::sh]"
+    ],
+    "override_attributes": {
+        "shellcheck": {
+            "install_method": "package"
+        }
+    }
+}
