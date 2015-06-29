@@ -6,8 +6,10 @@
         "recipe[linters::sh]"
     ],
     "override_attributes": {
-        "shellcheck": {
-            "install_method": "package"
+        "linters": {
+            "sh": {
+                "install_method": "package"
+            }
         }
     }
 }

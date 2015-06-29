@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-install_method = node['haskell']['hlint']['install_method']
+install_method = node['linters']['haskell']['install_method']
 
 package 'hlint' do
   action :upgrade

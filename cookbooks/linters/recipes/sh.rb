@@ -27,7 +27,7 @@ shells.each do |shell|
   end
 end
 
-install_method = node['shellcheck']['install_method']
+install_method = node['linters']['sh']['install_method']
 
 package 'shellcheck' do
   action :upgrade

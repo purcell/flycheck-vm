@@ -7,8 +7,8 @@
         "recipe[linters::haskell]"
     ],
     "override_attributes": {
-        "haskell": {
-            "hlint": {
+        "linters": {
+            "haskell": {
                 "install_method": "package"
             }
         }
