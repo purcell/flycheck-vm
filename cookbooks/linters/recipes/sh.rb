@@ -29,12 +29,6 @@ end
 
 install_method = node['linters']['sh']['install_method']
 
-package 'shellcheck' do
-  action :upgrade
-  options '--no-install-recommends'
-  only_if { install_method == 'package' }
-end
-
 include_recipe 'haskell::cabal' if install_method == 'cabal'
 
 cabal_install 'shellcheck' do
