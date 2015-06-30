@@ -18,19 +18,19 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-version = node['jruby']['version']
-install_path = "/opt/jruby-#{version}"
-archive = "jruby-bin-#{version}.tar.gz"
-jruby_bin = "https://s3.amazonaws.com/jruby.org/downloads/#{version}/#{archive}"
+include_recipe 'ark'
 
-tar_extract jruby_bin do
-  action :extract
-  target_dir '/opt/'
-  download_dir Chef::Config[:file_cache_path]
-  creates "#{install_path}/bin/jruby"
+version = node['jruby']['version']
+archive = "jruby-bin-#{version}.tar.gz"
+
+target = ark "jruby-#{version}" do
+  action :put
+  path '/opt'
+  version version
+  url "https://s3.amazonaws.com/jruby.org/downloads/#{version}/#{archive}"
 end
 
 link '/usr/local/bin/jruby' do
-  to "#{install_path}/bin/jruby"
+  to "#{target.path}/jruby-#{version}/bin/jruby"
   only_if { node['jruby']['symlink'] }
 end

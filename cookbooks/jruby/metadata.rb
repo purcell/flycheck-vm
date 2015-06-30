@@ -1,3 +1,3 @@
 name 'jruby'
 
-depends 'tar'
+depends 'ark'

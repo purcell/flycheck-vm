@@ -19,23 +19,11 @@
 # SOFTWARE.
 
 version = node['linters']['rpm']['rpmlint_version']
-basename = "rpmlint-#{version}"
-archive = "#{basename}.tar.xz"
-local_file = "#{Chef::Config[:file_cache_path]}/#{archive}"
+archive = "rpmlint-#{version}.tar.xz"
 
-rpmlint_installed = ::File::exists?('/usr/local/bin/rpmlint')
-
-remote_file local_file do
-  source "http://sourceforge.net/projects/rpmlint/files/#{archive}/download"
-  mode 00644
-  not_if { rpmlint_installed }
-end
-
-bash "install rpmlint" do
-  code <<-EOH
-tar xf "#{local_file}" -C "#{Chef::Config[:file_cache_path]}"
-cd "#{Chef::Config[:file_cache_path]}/#{basename}"
-make install
-  EOH
-  not_if { rpmlint_installed }
+ark 'rpmlint' do
+  url "http://sourceforge.net/projects/rpmlint/files/#{archive}"
+  action :install_with_make
+  prefix_root '/usr'
+  version version
 end

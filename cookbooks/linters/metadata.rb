@@ -1,5 +1,6 @@
 name 'linters'
 
+depends 'ark'
 depends 'haskell'
 depends 'lua'
 depends 'nodejs'
