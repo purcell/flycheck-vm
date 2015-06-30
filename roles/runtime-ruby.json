@@ -4,9 +4,14 @@
     "run_list": [
         "role[base]",
         "recipe[ruby::1.9.1]",
-        "recipe[ruby::symlinks]"
+        "recipe[ruby::symlinks]",
+        "recipe[jruby]"
     ],
     "override_attributes": {
+        "jruby": {
+            "version": "1.7.20.1",
+            "symlink": true
+        },
         "languages": {
             "ruby": {
                 "default_version": "1.9.1"
