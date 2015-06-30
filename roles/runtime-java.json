@@ -1,0 +1,13 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-java",
+    "run_list": [
+        "role[base]",
+        "recipe[java]"
+    ],
+    "override_attributes": {
+        "java": {
+            "jdk_version": "7"
+        }
+    }
+}

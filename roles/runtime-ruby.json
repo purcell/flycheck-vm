@@ -5,6 +5,7 @@
         "role[base]",
         "recipe[ruby::1.9.1]",
         "recipe[ruby::symlinks]",
+        "role[runtime-java]",
         "recipe[jruby]"
     ],
     "override_attributes": {
