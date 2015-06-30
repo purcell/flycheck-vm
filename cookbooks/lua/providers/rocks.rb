@@ -26,17 +26,9 @@ use_inline_resources
 
 action :install do
   if @current_resource.version.nil?
-    converge_by("install package #{@new_resource} #{new_resource.version}") do
-       Chef::Log.info("Installing #{@new_resource.name} #{new_resource.version}")
-       install_package(@new_resource.name, @new_resource.version)
-    end
+    install_resource(@new_resource.version)
   elsif @current_resource.version != @new_resource.version
-    description = "install package #{@new_resource} #{@current_resource.version} -> #{@new_resource.version}"
-    converge_by(description) do
-      Chef::Log.info("Moving #{@new_resource.name} from #{@current_resource.version} to #{new_resource.version}")
-      remove_package(@new_resource.name)
-      install_package(@new_resource.name, @new_resource.version)
-    end
+    upgrade_resource(@new_resource.version)
   end
 end
 
@@ -44,27 +36,19 @@ action :uninstall do
   if !@current_resource.version.nil?
     desc = "uninstall package #{@new_resource} #{@current_resource.version}"
     converge_by(desc) do
-      Chef::Log.info("Removing #{@new_resource.name}")
+      Chef::Log.info("#{@new_resource} removed #{@new_resource.name} #{@current_resource.version}")
       remove_package(@new_resource.name)
     end
   end
 end
 
 action :upgrade do
+  latest_version = get_available_versions(@new_resource.package_name).first
   if @current_resource.version.nil?
-    converge_by("install package #{@new_resource} #{new_resource.version}") do
-      Chef::Log.info("Installing #{@new_resource.name} #{new_resource.version}")
-      install_package(@new_resource.package_name, @new_resource.version)
-    end
+    install_resource(latest_version)
   else
-    latest_version = get_available_versions(@new_resource.package_name).first
     if @current_resource.version != latest_version
-      description = "upgrade package #{@new_resource} #{@current_resource.version} -> #{latest_version}"
-      converge_by(description) do
-        Chef::Log.info("Upgrading #{@new_resource.name} from #{@current_resource.version} to #{latest_version}")
-        remove_package(@new_resource.name)
-        install_package(@new_resource.name, nil)
-      end
+      upgrade_resource(latest_version)
     end
   end
 end
@@ -98,6 +82,22 @@ def get_available_versions(name)
   version_lines
     .map { |line| line.strip.split(/\s/).first }
     .uniq
+end
+
+def install_resource(version)
+  converge_by("install package #{@new_resource} #{version}") do
+    Chef::Log.info("#{@new_resource} installed #{@new_resource.name} #{version}")
+    install_package(@new_resource.package_name, version)
+  end
+end
+
+def upgrade_resource(version)
+  description = "upgrade package #{@new_resource} #{@current_resource.version} -> #{version}"
+  converge_by(description) do
+    Chef::Log.info("#{@new_resource} upgraded #{@new_resource.name} from #{@current_resource.version} to #{version}")
+    remove_package(@new_resource.name)
+    install_package(@new_resource.name, version)
+  end
 end
 
 def install_package(name, version)
