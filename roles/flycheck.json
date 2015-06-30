@@ -32,6 +32,7 @@
         "role[language-racket]",
         "role[language-rpm]",
         "role[language-rst]",
+        "role[language-ruby]",
         "role[language-rust]",
         "role[language-sass]",
         "role[language-scss]",
