@@ -35,6 +35,7 @@
         "role[language-ruby]",
         "role[language-rust]",
         "role[language-sass]",
+        "role[language-scala]",
         "role[language-scss]",
         "role[language-sh]",
         "role[language-slim]",

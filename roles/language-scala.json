@@ -1,0 +1,17 @@
+{
+    "json_class": "Chef::Role",
+    "name": "language-scala",
+    "run_list": [
+        "role[base]",
+        "role[runtime-java]",
+        "recipe[scala]",
+        "recipe[linters::scala]"
+    ],
+    "override_attributes": {
+        "linters": {
+            "scala": {
+                "scalastyle_version": "0.6.0"
+            }
+        }
+    }
+}

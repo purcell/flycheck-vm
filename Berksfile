@@ -16,6 +16,7 @@ cookbook 'php'
 cookbook 'python'
 cookbook 'ruby'
 cookbook 'rustlang'
+cookbook 'scala'
 
 cookbook 'd',       path: 'cookbooks/d'
 cookbook 'gcc',     path: 'cookbooks/gcc'

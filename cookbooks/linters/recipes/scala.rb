@@ -18,11 +18,26 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-version = node['linters']['rpm']['rpmlint_version']
-archive = "rpmlint-#{version}.tar.xz"
+version = node['linters']['scala']['scalastyle_version']
+# Extract the scala major/minor version
+scala_version = node['scala']['version'].split('.').first(2).join('.')
+scalastyle_jar = "scalastyle_#{scala_version}-#{version}-batch.jar"
 
-ark 'rpmlint' do
-  url "http://sourceforge.net/projects/rpmlint/files/#{archive}"
-  action :install_with_make
-  version version
+directory '/opt/scalastyle' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+remote_file "/opt/scalastyle/#{scalastyle_jar}" do
+  source "https://oss.sonatype.org/content/repositories/releases/org/scalastyle/scalastyle_#{scala_version}/#{version}/#{scalastyle_jar}"
+  owner 'root'
+  group 'root'
+  mode '0644'
+  action :create_if_missing
+end
+
+link '/opt/scalastyle/scalastyle-batch.jar' do
+  to "/opt/scalastyle/#{scalastyle_jar}"
 end
