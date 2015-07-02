@@ -20,7 +20,7 @@
 
 version = node['lua']['version']
 
-["lua#{version}", 'luarocks'].each do |pkg|
+%W(lua#{version} luarocks).each do |pkg|
   package pkg do
     action :upgrade
   end

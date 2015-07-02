@@ -22,8 +22,8 @@ include_recipe 'ruby::symlinks'
 
 # foodcritic depends on nokogiri, which needs zlib1g-dev to build
 package 'zlib1g-dev' do
-  action :upgrade
   options '--no-install-recommends'
+  action :upgrade
 end
 
 gem_package 'foodcritic' do

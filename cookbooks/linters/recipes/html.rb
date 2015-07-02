@@ -19,6 +19,6 @@
 # SOFTWARE.
 
 package 'tidy' do
-  action :upgrade
   options '--no-install-recommends'
+  action :upgrade
 end

@@ -20,7 +20,7 @@
 
 include_recipe 'ruby::symlinks'
 
-['puppet', 'puppet-lint'].each do |pkg|
+%w(puppet puppet-lint).each do |pkg|
   gem_package pkg do
     action :upgrade
   end

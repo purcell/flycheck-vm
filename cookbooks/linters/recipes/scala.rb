@@ -40,4 +40,5 @@ end
 
 link '/opt/scalastyle/scalastyle-batch.jar' do
   to "/opt/scalastyle/#{scalastyle_jar}"
+  action :create
 end

@@ -27,11 +27,11 @@ git '/opt/cask' do
 end
 
 file '/etc/profile.d/cask.sh' do
+  content <<END
+export PATH="/opt/cask/bin:$PATH"
+END
   owner 'root'
   group 'root'
   mode '0644'
   action :create
-  content <<END
-export PATH="/opt/cask/bin:$PATH"
-END
 end

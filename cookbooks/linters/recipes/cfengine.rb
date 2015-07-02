@@ -23,9 +23,10 @@ apt_repository 'cfengine' do
   distribution 'stable'
   components ['main']
   key 'http://cfengine.com/pub/gpg.key'
+  action :add
 end
 
 package 'cfengine-community' do
-  action :upgrade
   options '--no-install-recommends'
+  action :upgrade
 end

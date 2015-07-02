@@ -19,8 +19,9 @@
 # SOFTWARE.
 
 apt_repository 'ubuntu-elisp' do
-  uri          'ppa:ubuntu-elisp/ppa'
+  uri 'ppa:ubuntu-elisp/ppa'
   distribution node['lsb']['codename']
+  action :add
 end
 
 package 'emacs-snapshot-nox' do

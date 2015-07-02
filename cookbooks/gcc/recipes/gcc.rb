@@ -18,9 +18,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-['gcc', 'g++'].each do |pkg|
+%w(gcc g++).each do |pkg|
   package "#{pkg}-#{node['gcc']['version']}" do
-    action :upgrade
     options '--no-install-recommends'
+    action :upgrade
   end
 end

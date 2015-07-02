@@ -20,7 +20,7 @@
 
 ['chktex', 'lacheck'].each do |pkg|
   package pkg do
-    action :install
     options '--no-install-recommends'
+    action :install
   end
 end

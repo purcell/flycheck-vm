@@ -19,11 +19,12 @@
 # SOFTWARE.
 
 apt_repository 'plt-racket' do
-  uri          'ppa:plt/racket'
+  uri 'ppa:plt/racket'
   distribution node['lsb']['codename']
+  action :add
 end
 
 package 'racket' do
-  action :upgrade
   options '--no-install-recommends'
+  action :upgrade
 end

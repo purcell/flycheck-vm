@@ -20,7 +20,7 @@
 
 include_recipe 'ruby::symlinks'
 
-['rubocop', 'ruby-lint'].each do |gem|
+%w(rubocop ruby-lint).each do |gem|
   gem_package gem do
     action :upgrade
   end

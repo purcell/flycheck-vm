@@ -19,9 +19,9 @@
 # SOFTWARE.
 
 # libxml2-utils has xmllint inside
-['libxml2-utils', 'xmlstarlet'].each do |pkg|
+%w(libxml2-utils xmlstarlet).each do |pkg|
   package pkg do
-    action :upgrade
     options '--no-install-recommends'
+    action :upgrade
   end
 end

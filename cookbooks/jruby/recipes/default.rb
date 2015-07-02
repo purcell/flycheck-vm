@@ -24,13 +24,14 @@ version = node['jruby']['version']
 archive = "jruby-bin-#{version}.tar.gz"
 
 target = ark "jruby-#{version}" do
-  action :put
+  url "https://s3.amazonaws.com/jruby.org/downloads/#{version}/#{archive}"
   path '/opt'
   version version
-  url "https://s3.amazonaws.com/jruby.org/downloads/#{version}/#{archive}"
+  action :put
 end
 
 link '/usr/local/bin/jruby' do
   to "#{target.path}/jruby-#{version}/bin/jruby"
   only_if { node['jruby']['symlink'] }
+  action :create
 end

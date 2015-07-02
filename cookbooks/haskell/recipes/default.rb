@@ -19,27 +19,28 @@
 # SOFTWARE.
 
 apt_repository 'hvr-ghc' do
-  uri          'ppa:hvr/ghc'
+  uri 'ppa:hvr/ghc'
   distribution node['lsb']['codename']
+  action :add
 end
 
-['ghc', 'cabal', 'alex', 'happy'].each do |program|
+%w(ghc cabal alex happy).each do |program|
   version = node['haskell'][program]['version']
   package = program == 'cabal' ? 'cabal-install' : program
 
   package "#{package}-#{version}" do
-    action :upgrade
     options '--no-install-recommends'
+    action :upgrade
   end
 
   file "/etc/profile.d/#{program}.sh" do
+    content <<END
+export PATH="/opt/#{program}/#{version}/bin:$PATH"
+END
     owner 'root'
     group 'root'
     mode '0644'
     action :create
-    content <<END
-export PATH="/opt/#{program}/#{version}/bin:$PATH"
-END
   end
 end
 

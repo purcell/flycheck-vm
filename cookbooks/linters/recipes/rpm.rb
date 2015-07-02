@@ -23,6 +23,6 @@ archive = "rpmlint-#{version}.tar.xz"
 
 ark 'rpmlint' do
   url "http://sourceforge.net/projects/rpmlint/files/#{archive}"
-  action :install_with_make
   version version
+  action :install_with_make
 end

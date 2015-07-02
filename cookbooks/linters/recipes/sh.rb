@@ -35,4 +35,5 @@ cabal_install 'shellcheck' do
   user node['current_user']
   global_install
   only_if { 'install_method' == 'cabal' }
+  action :install
 end

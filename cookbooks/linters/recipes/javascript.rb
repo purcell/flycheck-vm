@@ -21,7 +21,7 @@
 include_recipe 'python'
 include_recipe 'nodejs'
 
-['jshint', 'eslint', 'jscs', 'standard', 'semistandard'].each do |pkg|
+%w(jshint eslint jscs standard semistandard).each do |pkg|
   nodejs_npm pkg do
     action :install
   end

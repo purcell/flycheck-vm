@@ -21,8 +21,8 @@
 install_method = node['linters']['haskell']['install_method']
 
 package 'hlint' do
-  action :upgrade
   only_if { install_method == 'package' }
+  action :upgrade
 end
 
 include_recipe 'haskell::cabal' if install_method == 'cabal'
@@ -31,4 +31,5 @@ cabal_install 'hlint' do
   user node['current_user']
   global_install
   only_if { install_method == 'cabal' }
+  action :install
 end

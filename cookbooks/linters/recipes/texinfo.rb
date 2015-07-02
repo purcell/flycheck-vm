@@ -19,6 +19,6 @@
 # SOFTWARE.
 
 package 'texinfo' do
-  action :install
   options '--no-install-recommends'
+  action :install
 end

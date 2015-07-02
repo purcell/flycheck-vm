@@ -20,7 +20,7 @@
 
 include_recipe 'python'
 
-['flake8', 'pep8-naming', 'pylint'].each do |pkg|
+%w(flake8 pep8-naming pylint).each do |pkg|
   python_pip pkg do
     action :upgrade
   end

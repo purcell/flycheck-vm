@@ -20,4 +20,6 @@
 
 include_recipe 'cabal'
 
-cabal_update node['current_user']
+cabal_update node['current_user'] do
+  action :update
+end
