@@ -31,6 +31,7 @@
         "role[language-python]",
         "role[language-racket]",
         "role[language-rpm]",
+        "role[language-r]",
         "role[language-rst]",
         "role[language-ruby]",
         "role[language-rust]",

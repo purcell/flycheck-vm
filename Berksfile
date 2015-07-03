@@ -25,6 +25,7 @@ cookbook 'jruby',   path: 'cookbooks/jruby'
 cookbook 'linters', path: 'cookbooks/linters'
 cookbook 'llvm',    path: 'cookbooks/llvm'
 cookbook 'lua',     path: 'cookbooks/lua'
+cookbook 'r',       path: 'cookbooks/r'
 
 # Emacs
 cookbook 'emacs', path: 'cookbooks/emacs'

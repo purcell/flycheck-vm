@@ -1,0 +1,8 @@
+{
+    "json_class": "Chef::Role",
+    "name": "runtime-r",
+    "run_list": [
+        "role[base]",
+        "recipe[r]"
+    ]
+}
