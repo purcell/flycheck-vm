@@ -18,7 +18,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-package "clang-#{node['llvm']['version']}" do
+clang = "clang-#{node['llvm']['version']}"
+
+package clang do
   options '--no-install-recommends'
   action :upgrade
+end
+
+link '/usr/local/bin/clang' do
+  to "/usr/bin/#{clang}"
+  action :create
 end
