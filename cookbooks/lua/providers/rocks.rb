@@ -36,8 +36,8 @@ action :uninstall do
   unless @current_resource.version.nil?
     desc = "uninstall package #{@new_resource} #{@current_resource.version}"
     converge_by(desc) do
-      Chef::Log.info("#{@new_resource} removed #{@new_resource.name} #{@current_resource.version}")
       remove_package(@new_resource.name)
+      Chef::Log.info("#{@new_resource} uninstalled #{@new_resource.name} #{@current_resource.version}")
     end
   end
 end
@@ -86,17 +86,17 @@ end
 
 def install_resource(version)
   converge_by("install package #{@new_resource} #{version}") do
-    Chef::Log.info("#{@new_resource} installed #{@new_resource.name} #{version}")
     install_package(@new_resource.package_name, version)
+    Chef::Log.info("#{@new_resource} installed #{@new_resource.name} #{version}")
   end
 end
 
 def upgrade_resource(version)
   description = "upgrade package #{@new_resource} #{@current_resource.version} -> #{version}"
   converge_by(description) do
-    Chef::Log.info("#{@new_resource} upgraded #{@new_resource.name} from #{@current_resource.version} to #{version}")
     remove_package(@new_resource.name)
     install_package(@new_resource.name, version)
+    Chef::Log.info("#{@new_resource} upgraded #{@new_resource.name} from #{@current_resource.version} to #{version}")
   end
 end
 
