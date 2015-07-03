@@ -2,6 +2,8 @@
     "json_class": "Chef::Role",
     "name": "language-scss",
     "run_list": [
-        "role[language-sass]"
+        "role[base]",
+        "role[language-sass]",
+        "recipe[linters::scss]"
     ]
 }
