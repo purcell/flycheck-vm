@@ -33,7 +33,7 @@ action :install do
 end
 
 action :uninstall do
-  if !@current_resource.version.nil?
+  unless @current_resource.version.nil?
     desc = "uninstall package #{@new_resource} #{@current_resource.version}"
     converge_by(desc) do
       Chef::Log.info("#{@new_resource} removed #{@new_resource.name} #{@current_resource.version}")
@@ -63,17 +63,17 @@ def load_current_resource
 end
 
 def get_installed_version(name)
-  result = shell_out!("#{@bin} list")
+  result = shell_out!(@bin, 'list')
   version_line = result.stdout
                  .each_line
                  .drop_while { |line| line.strip != name }
                  .drop(1)
                  .first
-  version_line.strip.split(/\s/).first if !version_line.nil?
+  version_line.strip.split(/\s/).first unless version_line.nil?
 end
 
 def get_available_versions(name)
-  result = shell_out!("#{@bin} search #{name}")
+  result = shell_out!(@bin, 'search', name)
   version_lines = result.stdout
                   .each_line
                   .drop_while { |line| line.strip != name }
@@ -101,13 +101,13 @@ def upgrade_resource(version)
 end
 
 def install_package(name, version)
-  cmd = "#{@bin} install #{name}"
-  if !version.nil?
-    cmd << " #{version}"
+  if version
+    shell_out!(@bin, 'install', name, version)
+  else
+    shell_out!(@bin, 'install', name)
   end
-  shell_out!(cmd)
 end
 
 def remove_package(name)
-  shell_out!("#{@bin} remove #{name}")
+  shell_out!(@bin, 'remove', name)
 end
