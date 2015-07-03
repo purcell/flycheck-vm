@@ -18,6 +18,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+package 'python-rpm' do         # Dependency of rpmlint
+  options '--no-install-recommends'
+  action :upgrade
+end
+
 version = node['linters']['rpm']['rpmlint_version']
 archive = "rpmlint-#{version}.tar.xz"
 
