@@ -18,6 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-gem_package 'scss-lint' do
-  action :upgrade
+%w(scss_lint scss_lint_reporter_checkstyle).each do |gem|
+  gem_package gem do
+    action :upgrade
+  end
 end
