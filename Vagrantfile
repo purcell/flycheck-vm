@@ -37,7 +37,7 @@ Vagrant.configure('2') do |config|
   if FLYCHECK
     config.vm.synced_folder FLYCHECK, '/home/vagrant/flycheck',
                             type: 'rsync',
-                            rsync__exclude: ['.git/', '.cask/']
+                            rsync__exclude: ['.git/', '.cask/', '.#*']
   end
 
   config.berkshelf.enabled = true
