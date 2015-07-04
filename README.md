@@ -26,6 +26,20 @@ automatically sync the source code on `vagrant up`, you can explicitly sync with
 Usage
 -----
 
+Start the VM, and provision it:
+
+```console
+$ vagrant up --provision
+```
+
+Sync the Flycheck sources with the VM:
+
+```console
+$ vagrant rsync
+# Automatically sync on changes
+$ vagrant rsync-auto
+```
+
 Connect to the VM:
 
 ```console
