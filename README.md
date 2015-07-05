@@ -12,9 +12,8 @@ Setup
 
 - Install [Vagrant][]
 - Install [Chef DK][]
-- Install [Vagrant Berkshelf][] with `vagrant plugin install vagrant-berkshelf`
-- Install [Vagrant Triggers][] with `vagrant plugin install vagrant-triggers`
-- `vagrant up --provision`
+- Install required Vagrant plugins with `rake vagrant:plugins`
+- Run `vagrant up --provision`
 
 To have the Flycheck source code available inside the VM, you must have Flycheck
 cloned in `./flycheck` or `../flycheck`, relative to this README.  Vagrant will
