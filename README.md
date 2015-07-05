@@ -13,6 +13,7 @@ Setup
 - Install [Vagrant][]
 - Install [Chef DK][]
 - Install [Vagrant Berkshelf][] with `vagrant plugin install vagrant-berkshelf`
+- Install [Vagrant Triggers][] with `vagrant plugin install vagrant-triggers`
 - `vagrant up --provision`
 
 To have the Flycheck source code available inside the VM, you must have Flycheck
@@ -22,6 +23,7 @@ automatically sync the source code on `vagrant up`, you can explicitly sync with
 
 [Chef DK]: https://downloads.chef.io/chef-dk/
 [Vagrant Berkshelf]: https://github.com/berkshelf/vagrant-berkshelf
+[Vagrant Triggers]: https://github.com/emyl/vagrant-triggers
 
 Usage
 -----

@@ -24,10 +24,10 @@ FLYCHECK_CANDIDATES = [BASEDIR.join('flycheck'),
                        BASEDIR.parent.join('flycheck')]
 FLYCHECK = FLYCHECK_CANDIDATES.each.find(&:directory?)
 
-%w(vagrant-berkshelf).each do |plugin|
+%w(vagrant-berkshelf vagrant-triggers).each do |plugin|
   unless Vagrant.has_plugin?(plugin)
     fail "#{plugin} is not installed! " \
-         'Run `vagrant plugin install vagrant-berkshelf`'
+         "Run `vagrant plugin install #{plugin}`"
   end
 end
 
@@ -48,6 +48,21 @@ Vagrant.configure('2') do |config|
   end
 
   config.berkshelf.enabled = true
+
+  # Work around https://github.com/mitchellh/vagrant/issues/5199
+  def clear_synced_folder_cache
+    cache_path = '.vagrant/machines/default/virtualbox/synced_folders'
+    cache_file = BASEDIR.join(cache_path)
+    cache_file.delete if cache_file.exist?
+  end
+
+  config.trigger.before [:reload, :up] do
+    clear_synced_folder_cache
+  end
+
+  config.trigger.after [:halt] do
+    clear_synced_folder_cache
+  end
 
   config.vm.provision 'chef_zero' do |chef|
     chef.roles_path = ['roles']
