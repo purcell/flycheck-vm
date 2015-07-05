@@ -47,8 +47,6 @@ Vagrant.configure('2') do |config|
 
     roles = ENV['CHEF_ROLES']
     roles = roles ? roles.split(',') : ['flycheck']
-    roles.each do |role|
-      chef.add_role role
-    end
+    roles.each { |role| chef.add_role role }
   end
 end
