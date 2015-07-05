@@ -24,6 +24,13 @@ FLYCHECK_CANDIDATES = [BASEDIR.join('flycheck'),
                        BASEDIR.parent.join('flycheck')]
 FLYCHECK = FLYCHECK_CANDIDATES.each.find(&:directory?)
 
+%w(vagrant-berkshelf).each do |plugin|
+  unless Vagrant.has_plugin?(plugin)
+    fail "#{plugin} is not installed! " \
+         'Run `vagrant plugin install vagrant-berkshelf`'
+  end
+end
+
 Vagrant.configure('2') do |config|
   config.vm.box = 'ubuntu/trusty64'
   config.vm.host_name = 'flycheck-test'
