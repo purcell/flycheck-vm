@@ -21,6 +21,7 @@
         "role[language-handlebars]",
         "role[language-haskell]",
         "role[language-html]",
+        "role[language-jade]",
         "role[language-javascript]",
         "role[language-json]",
         "role[language-less]",
